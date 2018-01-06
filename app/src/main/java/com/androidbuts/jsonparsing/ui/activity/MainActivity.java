@@ -22,6 +22,7 @@ import com.androidbuts.jsonparsing.retrofit.api.RetroClient;
 import com.androidbuts.jsonparsing.utils.InternetConnection;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private View parentView;
 
-    private ArrayList<Contact> contactList;
+    private List<Contact> contactList;
     private MyContactAdapter adapter;
 
 
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Array List for Binding Data from JSON to this List
          */
-        contactList = new ArrayList<>();
+        //contactList = new ArrayList<>();
 
         parentView = findViewById(R.id.parentLayout);
 
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Snackbar.make(parentView, contactList.get(position).getName() + " => " + contactList.get(position).getPhone().getHome(), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(parentView, contactList.get(position).getTimeBegin() + " => " + contactList.get(position).getTimeEnd(), Snackbar.LENGTH_LONG).show();
             }
         });
 

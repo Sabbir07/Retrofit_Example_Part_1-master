@@ -12,7 +12,8 @@ public class RetroClient {
     /********
      * URLS
      *******/
-    private static final String ROOT_URL = "http://pratikbutani.x10.mx";
+    //private static final String ROOT_URL = "http://pratikbutani.x10.mx";
+    private static final String ROOT_URL = "http://preneurlab.com/robipmm/";
 
     /**
      * Get Retrofit Instance
